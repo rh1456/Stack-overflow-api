@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-
+using Stack_overflow_api.Models;
 
 namespace Stack_overflow_api.Models
 {

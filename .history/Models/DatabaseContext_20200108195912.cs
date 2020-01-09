@@ -3,16 +3,12 @@ using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-
 namespace Stack_overflow_api.Models
 {
   public partial class DatabaseContext : DbContext
   {
-
-    public DbSet<Post> Posts { get; set; }
     public DbSet<Response> Responses { get; set; }
-
-
+    public DbSet<Post> Posts { get; set; }
     private string ConvertPostConnectionToConnectionString(string connection)
     {
       var _connection = connection.Replace("postgres://", String.Empty);

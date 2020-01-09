@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-
+using Stack_overflow_api.Models
 
 namespace Stack_overflow_api.Models
 {
@@ -10,7 +10,6 @@ namespace Stack_overflow_api.Models
   {
 
     public DbSet<Post> Posts { get; set; }
-    public DbSet<Response> Responses { get; set; }
 
 
     private string ConvertPostConnectionToConnectionString(string connection)

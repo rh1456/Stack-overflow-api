@@ -32,9 +32,9 @@ namespace Stack_overflow_api.Controllers
       return Posts.ToList();
     }
     [HttpGet("{id}")]
-    public ActionResult GetOnePost(int id)
+    public ActionResult(int id)
     {
-      var post = db.Posts.FirstOrDefault(post => post.Id == id);
+      var post = db.Posts.FirstOrDefautl(post => post.id == id);
       if (post == null)
       {
         return NotFound();

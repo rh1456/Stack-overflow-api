@@ -28,23 +28,11 @@ namespace Stack_overflow_api.Controllers
     [HttpGet]
     public ActionResult<IEnumerable<Post>> GetAllPosts()
     {
-      var Posts = db.Posts.OrderByDescending(post => post.PostCreated);
+      var Posts = db.Posts.OrderbyDescending(post => post.PostCreated);
       return Posts.ToList();
-    }
-    [HttpGet("{id}")]
-    public ActionResult GetOnePost(int id)
-    {
-      var post = db.Posts.FirstOrDefault(post => post.Id == id);
-      if (post == null)
-      {
-        return NotFound();
-      }
-      else
-      {
-        return Ok(post);
-      }
 
     }
+
 
   }
 

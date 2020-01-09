@@ -34,7 +34,7 @@ namespace Stack_overflow_api.Controllers
     [HttpGet("{id}")]
     public ActionResult GetOnePost(int id)
     {
-      var post = db.Posts.FirstOrDefault(post => post.Id == id);
+      var post = db.Posts.FirstOrDefault(post => post.id == id);
       if (post == null)
       {
         return NotFound();

@@ -33,6 +33,5 @@ namespace Stack_overflow_api.Controllers
       var db = new DatabaseContext();
       return Ok(db.Responses.OrderBy(o => o.Id));
     }
-
   }
 }

@@ -28,11 +28,10 @@ namespace Stack_overflow_api.Controllers
       return entry;
     }
     [HttpGet]
-    public ActionResult GetAllResponses()
+    public ActionResult<Response> GetAllResponses()
     {
-      var db = new DatabaseContext();
-      return Ok(db.Responses.OrderBy(o => o.Id));
+      var response = db.Responses.OrderByDescending(response => response.Id);
+      return response.ToList();
     }
-
   }
 }

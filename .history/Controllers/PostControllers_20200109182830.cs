@@ -46,18 +46,16 @@ namespace Stack_overflow_api.Controllers
       }
 
     }
-    [HttpGet("searchterm/{postContent}")]
-    public async Task<ActionResult<Response>> SearchPosts(string postContent)
+    [HttpGet("searchterm/{description}")]
+    public async Task<ActionResult<Response>> SearchPosts(string description)
     {
-      var post = await db.Posts.FindAsync(postContent);
-      if (post == null)
+      var responsePost = await db.ResponsePosts.FindAsync(description);
+      if (responsePost == null)
       {
         return NotFound();
       }
-      else
-      {
-        return Ok(post);
-      }
+      return responsePost;
+
     }
 
   }

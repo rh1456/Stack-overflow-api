@@ -28,11 +28,19 @@ namespace Stack_overflow_api.Controllers
       return entry;
     }
     [HttpGet]
-    public ActionResult GetAllResponses()
+    public ActionResult<IEnumerable<Response>> GetAllResponses()
     {
-      var db = new DatabaseContext();
-      return Ok(db.Responses.OrderBy(o => o.Id));
-    }
+      var response = db.Responses.FirstOrDefault(response => response.Id);
+      return Responses.ToList();
 
+      if (response == null)
+      {
+        return NotFound();
+      }
+      else
+      {
+        return Ok(response);
+      }
+    }
   }
 }

@@ -27,12 +27,5 @@ namespace Stack_overflow_api.Controllers
       db.SaveChanges();
       return entry;
     }
-    [HttpGet]
-    public ActionResult GetAllResponses()
-    {
-      var db = new DatabaseContext();
-      return Ok(db.Responses.OrderBy(o => o.Id));
-    }
-
   }
 }

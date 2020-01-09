@@ -46,7 +46,7 @@ namespace Stack_overflow_api.Controllers
       }
 
     }
-    [HttpGet("searchterm/{postContent}")]
+    [HttpGet("searchterm/{description}")]
     public async Task<ActionResult<Response>> SearchPosts(string postContent)
     {
       var post = await db.Posts.FindAsync(postContent);

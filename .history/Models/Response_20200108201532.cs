@@ -10,9 +10,6 @@ namespace Stack_overflow_api.Models
     public int RespUpvote { get; set; }
     public int RespDownVote { get; set; }
 
-    public int? PostId { get; set; }
-
-    public Post Posts { get; set; }
 
   }
 }

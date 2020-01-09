@@ -14,6 +14,5 @@ namespace Stack_overflow_api.Models
     public int PostDownVote { get; set; }
     public DateTime PostCreated { get; set; } = DateTime.Now;
 
-    public List<Post> Posts { get; set; } = new List<Post>();
   }
 }
